@@ -1,0 +1,30 @@
+#onboard 12MHz oscillator
+set_io clki 21
+
+#onboard LEDs
+set_io -nowarn led1 99
+set_io -nowarn led2 98
+set_io -nowarn led3 97
+set_io -nowarn led4 96
+set_io -nowarn led5 95
+
+#J3 connector wired to external dipswitch with pulldown
+set_io -nowarn dip[0] 44 #dipswitch pin 1
+set_io -nowarn dip[1] 45 #dipswitch pin 2
+set_io -nowarn dip[2] 47 #dipswitch pin 3
+set_io -nowarn dip[3] 48 #dipswitch pin 4
+set_io -nowarn dip[4] 56 #dipswitch pin 5
+set_io -nowarn dip[5] 60 #dipswitch pin 6
+set_io -nowarn dip[6] 61 #dipswitch pin 7
+set_io -nowarn dip[7] 62 #dipswitch pin 8
+
+#J1 connector wired to external 7-segment display
+set_io -nowarn disp[0] 112 #segment b
+set_io -nowarn disp[1] 113 #segment g
+set_io -nowarn disp[2] 114 #segment c
+set_io -nowarn disp[3] 115 #segment d
+set_io -nowarn disp[4] 116 #segment a
+set_io -nowarn disp[5] 117 #segment f
+set_io -nowarn disp[6] 118 #segment e
+set_io -nowarn disp[7] 119 #decimal point
+
