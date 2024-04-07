@@ -28,10 +28,11 @@ module seven_seg #(parameter INVERT = 0)
 			'hD: out = 7'b0111101;
 			'hE: out = 7'b1001111;
 			'hF: out = 7'b1000111;
-			default: out = {bcd[3], bcd[2], bcd[1], bcd[0], bcd[3], bcd[2], bcd[1]};
+			default: out = 7'b0000000;
 		endcase
 	end
 
-	assign {seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, seg_g} = (INVERT)?~out:out;
+	assign {seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, seg_g} =
+		(INVERT) ? ~out : out;
 
 endmodule
