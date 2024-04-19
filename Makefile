@@ -22,7 +22,7 @@ prog: $(OUTDIR)/lfsr.bin
 	$(PROG) $(PROG_options) $<
 clean:
 	rm -f $(OUTDIR)/*
-	rmdir $(OUTDIR)
+	-rmdir $(OUTDIR)
 
 $(OUTDIR)/lfsr.bin: $(OUTDIR)/lfsr.asc
 	$(BITPACK) $(BITPACK_options) $< $@
